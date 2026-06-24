@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .hero {
   position: relative;
@@ -137,7 +137,7 @@
   text-decoration: none;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -229,6 +229,20 @@
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-body-lg;
     line-height: 1.6;
+  }
+}
+
+.marketingDot {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: $color-black;
+  vertical-align: top;
+  margin-top: 20px;
+
+  @media (max-width: $bp-mobile) {
+    width: 10px;
+    height: 10px;
   }
 }
 

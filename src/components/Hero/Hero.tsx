@@ -55,6 +55,7 @@ export default function Hero() {
                 <strong className={styles.marketingBold}>
                   управлять спросом
                   <br />и увеличивать выручку
+                  <span className={styles.marketingDot} aria-hidden="true" />
                 </strong>
               </p>
             </div>
