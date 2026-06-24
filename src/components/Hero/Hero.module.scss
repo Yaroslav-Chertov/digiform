@@ -60,7 +60,7 @@
   font-style: normal;
 
   @media (max-width: $bp-mobile) {
-    margin-bottom: 36px;
+    margin-bottom: 18px;
   }
 }
 
@@ -98,6 +98,10 @@
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-body-lg;
     line-height: 1.6;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -119,6 +123,10 @@
     line-height: 1.8;
     margin-bottom: 40px;
     max-width: 503px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -183,15 +191,13 @@
   padding: 34px $content-pad-x 43px;
 
   @media (max-width: $bp-mobile) {
-    padding: 34px $content-pad-x-mobile 58px;
+    padding: 0 $content-pad-x-mobile 58px;
   }
 }
 
 .marketingHeadingWrap {
-  margin-bottom: 60px;
-
   @media (max-width: $bp-mobile) {
-    margin-bottom: 40px;
+    margin-bottom: 18px;
   }
 }
 
@@ -256,7 +262,7 @@
 
   @media (max-width: $bp-mobile) {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 8px;
     padding-top: 0;
   }
 }
