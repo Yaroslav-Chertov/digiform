@@ -25,6 +25,12 @@ export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
       return;
     }
 
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const id = requestAnimationFrame(() => setVisible(true));
+      return () => cancelAnimationFrame(id);
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

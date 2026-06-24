@@ -123,6 +123,7 @@
 }
 
 .ctaButton {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -134,13 +135,27 @@
   font-size: $text-button;
   color: $color-black;
   text-decoration: none;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: $color-black;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
 
   &:hover {
-    background: $color-black;
-    color: $color-white;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 
   @media (max-width: $bp-mobile) {
