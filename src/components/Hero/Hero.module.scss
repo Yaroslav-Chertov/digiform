@@ -66,7 +66,7 @@
 
 .headingBrand {
   font-size: $text-display-xl;
-  line-height: 0.76;
+  line-height: 109%;
   display: inline;
 
   @media (max-width: $bp-mobile) {
@@ -88,7 +88,7 @@
 
 .headingBody {
   font-size: $text-display-md;
-  line-height: 1.5;
+  line-height: 109%;
   display: inline;
 
   strong {
@@ -180,10 +180,10 @@
 .marketingContent {
   position: relative;
   z-index: 2;
-  padding: 116px $content-pad-x 43px;
+  padding: 34px $content-pad-x 43px;
 
   @media (max-width: $bp-mobile) {
-    padding: 80px $content-pad-x-mobile 58px;
+    padding: 34px $content-pad-x-mobile 58px;
   }
 }
 

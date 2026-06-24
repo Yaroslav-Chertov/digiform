@@ -15,14 +15,17 @@ $bg-card:           #f4f1f1;
 $grid-margin:       8.3333%;
 $grid-col:          8.3333%;
 
-$content-pad-x:           122px;
+$content-pad-x:           clamp(53px, calc(16.59vw - 116.8px), 122px);
 $content-pad-x-mobile:    53px;
 
-$header-pad-x:            122px;
+$header-pad-x:            clamp(53px, calc(16.59vw - 116.8px), 122px);
 $header-pad-left-mobile:  53px;
 $header-pad-right-mobile: 32px;
+$header-pad-top:          58px;
+$header-pad-top-mobile:   26px;
 
-$bp-mobile:         768px;
+$bp-mobile:         1024px;
+$bp-nav:            1024px;
 $bp-tablet:         1024px;
 $bp-desktop:        1440px;
 
