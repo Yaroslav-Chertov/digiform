@@ -126,13 +126,13 @@
 .divider {
   width: 100%;
   height: 1px;
-  margin: 28px 0 24px;
+  margin: 28px 0 0;
   background: $color-border;
 
   @media (max-width: $bp-mobile) {
     width: 100%;
     max-width: 186px;
-    margin: 16px 0 14px;
+    margin: 14px 0 0;
   }
 }
 
