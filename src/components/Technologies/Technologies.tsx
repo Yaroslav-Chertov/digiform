@@ -1,11 +1,11 @@
-import { Reveal } from '@/components/Reveal/Reveal';
-import styles from './Technologies.module.scss';
+import { Reveal } from "@/components/Reveal/Reveal";
+import styles from "./Technologies.module.scss";
 
 const METRICS = [
-  { title: 'Прогнозирование', label: 'спроса' },
-  { title: 'Анализ', label: 'покупательского поведения' },
-  { title: 'Построение', label: 'аудиторий' },
-  { title: 'Оценка', label: 'влияния маркетинга' },
+  { title: "Прогнозирование", label: "спроса" },
+  { title: "Анализ", label: "покупательского поведения" },
+  { title: "Построение", label: "аудиторий" },
+  { title: "Оценка", label: "влияния маркетинга" },
 ];
 
 export default function Technologies() {

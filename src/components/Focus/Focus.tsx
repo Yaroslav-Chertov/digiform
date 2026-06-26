@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { Reveal } from "@/components/Reveal/Reveal";
-import { Parallax } from "@/components/Parallax/Parallax";
 import styles from "./Focus.module.scss";
 
 const METRICS = [
@@ -13,16 +11,9 @@ const METRICS = [
 export default function Focus() {
   return (
     <section className={styles.focus} aria-label="Фокус на результате">
-      {/* <Parallax className={styles.rings} speed={0.12}>
-        <Image
-          src="/images/focus-3d.png"
-          alt=""
-          width={1024}
-          height={1024}
-          aria-hidden="true"
-          priority
-        />
-      </Parallax> */}
+      <div className={styles.rings} aria-hidden="true">
+        <img src="/images/focus-3d.png" alt="" width={920} height={920} />
+      </div>
       <div className={styles.inner}>
         <Reveal>
           <h2 className={styles.heading}>

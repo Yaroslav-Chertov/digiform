@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from "react";
 
 interface ParallaxProps {
   children: ReactNode;
@@ -8,7 +8,11 @@ interface ParallaxProps {
   speed?: number;
 }
 
-export function Parallax({ children, className = '', speed = 0.1 }: ParallaxProps) {
+export function Parallax({
+  children,
+  className = "",
+  speed = 0.1,
+}: ParallaxProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,24 +20,50 @@ export function Parallax({ children, className = '', speed = 0.1 }: ParallaxProp
     if (!el) return;
 
     const prefersReduced = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReduced) return;
 
+    const mq = window.matchMedia("(max-width: 1024px)");
+
     let raf = 0;
+
     const update = () => {
       raf = 0;
       el.style.transform = `translate3d(0, ${window.scrollY * speed}px, 0)`;
     };
+
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
     };
 
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
+    const attach = () => {
+      el.style.transform = "";
+      update();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    };
+
+    const detach = () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+      }
+      el.style.transform = "";
+    };
+
+    const onChange = (e: MediaQueryListEvent) => {
+      if (e.matches) detach();
+      else attach();
+    };
+
+    if (!mq.matches) attach();
+
+    mq.addEventListener("change", onChange);
+
     return () => {
-      window.removeEventListener('scroll', onScroll);
-      if (raf) cancelAnimationFrame(raf);
+      mq.removeEventListener("change", onChange);
+      detach();
     };
   }, [speed]);
 
