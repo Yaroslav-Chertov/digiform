@@ -119,7 +119,7 @@
   color: $color-black;
 
   @media (max-width: $bp-mobile) {
-    font-size: clamp(19px, 4.33vw, 26px);
+    font-size: 26px;
   }
 }
 

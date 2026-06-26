@@ -11,9 +11,9 @@ const METRICS = [
 export default function Focus() {
   return (
     <section className={styles.focus} aria-label="Фокус на результате">
-      <div className={styles.rings} aria-hidden="true">
+      {/* <div className={styles.rings} aria-hidden="true">
         <img src="/images/focus-3d.png" alt="" width={920} height={920} />
-      </div>
+      </div> */}
       <div className={styles.inner}>
         <Reveal>
           <h2 className={styles.heading}>

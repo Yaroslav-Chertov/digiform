@@ -141,7 +141,7 @@
   color: $color-black;
 
   @media (max-width: $bp-mobile) {
-    font-size: clamp(15px, 3.67vw, 22px);
+    font-size: 26px;
   }
 }
 
@@ -166,7 +166,7 @@
   color: $color-black;
 
   @media (max-width: $bp-mobile) {
-    font-size: clamp(14px, 3vw, 18px);
+    font-size: 22px;
     line-height: 1.36;
     color: $color-gray;
   }
