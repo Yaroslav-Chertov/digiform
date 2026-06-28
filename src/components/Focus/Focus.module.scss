@@ -16,26 +16,27 @@
 
 .rings {
   position: absolute;
-  top: -220px;
-  right: -230px;
+  top: -620px;
+  right: -295px;
   width: 920px;
-  height: auto;
+  height: 920px;
   z-index: 1;
   pointer-events: none;
   user-select: none;
-  will-change: transform;
 
   img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: contain;
     max-width: none;
-    height: auto;
   }
 
-  @media (max-width: $bp-mobile) {
-    top: -80px;
-    right: -380px;
-    width: 550px;
+  @media (max-width: 479px) {
+    top: -260px;
+    right: -300px;
+    width: 650px;
+    height: 650px;
   }
 }
 
@@ -121,6 +122,10 @@
   @media (max-width: $bp-mobile) {
     font-size: 26px;
   }
+
+  @media (max-width: 479px) {
+    font-size: $text-mob-card-title;
+  }
 }
 
 .divider {
@@ -130,7 +135,6 @@
   background: $color-border;
 
   @media (max-width: $bp-mobile) {
-    width: 100%;
     max-width: 186px;
     margin: 14px 0 0;
   }
@@ -147,5 +151,9 @@
     font-size: 22px;
     line-height: 1.36;
     color: $color-gray;
+  }
+
+  @media (max-width: 479px) {
+    font-size: $text-mob-card-label;
   }
 }

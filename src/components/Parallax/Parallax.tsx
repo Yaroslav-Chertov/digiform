@@ -38,6 +38,7 @@ export function Parallax({
     };
 
     const attach = () => {
+      el.style.willChange = "transform";
       el.style.transform = "";
       update();
       window.addEventListener("scroll", onScroll, { passive: true });
@@ -49,6 +50,7 @@ export function Parallax({
         cancelAnimationFrame(raf);
         raf = 0;
       }
+      el.style.willChange = "";
       el.style.transform = "";
     };
 

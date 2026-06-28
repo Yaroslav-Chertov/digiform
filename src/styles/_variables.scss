@@ -17,10 +17,10 @@ $grid-margin:       8.3333%;
 $grid-col:          8.3333%;
 
 $content-pad-x:           clamp(53px, calc(16.59vw - 116.8px), 122px);
-$content-pad-x-mobile:    53px;
+$content-pad-x-mobile:    clamp(20px, 5.5vw, 53px);
 
 $header-pad-x:            clamp(53px, calc(16.59vw - 116.8px), 122px);
-$header-pad-left-mobile:  53px;
+$header-pad-left-mobile:  clamp(20px, 5.5vw, 53px);
 $header-pad-right-mobile: 32px;
 $header-pad-top:          58px;
 $header-pad-top-mobile:   26px;
@@ -38,12 +38,14 @@ $text-button:       28px;
 $text-nav:          20px;
 $text-small:        14px;
 
-$text-mob-heading:  55px;
-$text-mob-body-lg:  30px;
-$text-mob-sub:      26px;
-$text-mob-body:     20px;
-$text-mob-button:   16px;
-$text-mob-small:    16px;
+$text-mob-heading:      55px;
+$text-mob-body-lg:      30px;
+$text-mob-sub:          26px;
+$text-mob-body:         20px;
+$text-mob-card-title:   16px;
+$text-mob-card-label:   14px;
+$text-mob-button:       16px;
+$text-mob-small:        16px;
 
 $lh-display:        90px;
 $lh-section:        80px;

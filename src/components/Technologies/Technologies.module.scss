@@ -90,11 +90,9 @@
   color: $color-black;
 
   @media (max-width: $bp-mobile) {
-    margin: 0 auto;
+    margin: 0;
     font-size: $text-mob-body;
     line-height: 1.5;
-    text-align: start;
-    margin-left: 90px;
   }
 }
 
@@ -118,18 +116,10 @@
   flex-direction: column;
 
   @media (max-width: $bp-mobile) {
-    &:nth-child(1) {
-      order: 2;
-    }
-    &:nth-child(2) {
-      order: 1;
-    }
-    &:nth-child(3) {
-      order: 4;
-    }
-    &:nth-child(4) {
-      order: 3;
-    }
+    &:nth-child(1) { order: 2; }
+    &:nth-child(2) { order: 1; }
+    &:nth-child(3) { order: 4; }
+    &:nth-child(4) { order: 3; }
   }
 }
 
@@ -143,6 +133,10 @@
   @media (max-width: $bp-mobile) {
     font-size: 26px;
   }
+
+  @media (max-width: 479px) {
+    font-size: $text-mob-card-title;
+  }
 }
 
 .divider {
@@ -152,7 +146,6 @@
   background: $color-border;
 
   @media (max-width: $bp-mobile) {
-    width: 100%;
     max-width: 186px;
     margin: 14px 0 0;
   }
@@ -169,6 +162,10 @@
     font-size: 22px;
     line-height: 1.36;
     color: $color-gray;
+  }
+
+  @media (max-width: 479px) {
+    font-size: $text-mob-card-label;
   }
 }
 

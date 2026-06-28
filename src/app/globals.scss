@@ -54,8 +54,8 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
@@ -69,7 +69,7 @@ body {
   background: $color-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
