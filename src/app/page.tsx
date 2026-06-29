@@ -1,8 +1,9 @@
-import Header from '@/components/Header/Header';
-import Hero from '@/components/Hero/Hero';
-import Ecosystem from '@/components/Ecosystem/Ecosystem';
-import Technologies from '@/components/Technologies/Technologies';
-import Focus from '@/components/Focus/Focus';
+import Header from "@/components/Header/Header";
+import Hero from "@/components/Hero/Hero";
+import Ecosystem from "@/components/Ecosystem/Ecosystem";
+import Technologies from "@/components/Technologies/Technologies";
+import Focus from "@/components/Focus/Focus";
+import Clients from "@/components/Clients/Clients";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Ecosystem />
         <Technologies />
         <Focus />
+        <Clients />
       </main>
     </>
   );

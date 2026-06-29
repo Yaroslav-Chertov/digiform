@@ -1,0 +1,117 @@
+@use "../../styles/variables" as *;
+
+.clients {
+  width: 100%;
+  background: $bg-light-teal;
+  padding: 61px 0 0;
+
+  @media (max-width: $bp-mobile) {
+    padding: 60px 0 0;
+  }
+}
+
+.inner {
+  padding: 0 $content-pad-x;
+
+  @media (max-width: $bp-mobile) {
+    padding: 0 $content-pad-x-mobile;
+  }
+}
+
+.heading {
+  margin: 0 0 103px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-display-xl;
+  line-height: 0.94;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-heading;
+    line-height: 0.87;
+    margin-bottom: 59px;
+  }
+}
+
+.dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: -3px;
+  background: $color-black;
+  vertical-align: text-bottom;
+
+  @media (max-width: $bp-mobile) {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 113px;
+
+  @media (max-width: $bp-mobile) {
+    gap: 10px;
+    padding-bottom: 59px;
+  }
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border: 1px solid #cac5c5;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-display-md;
+  line-height: 0.8;
+  color: $color-black;
+  white-space: nowrap;
+  border-radius: 10px;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-sub;
+    line-height: 1.85;
+    padding: 6px 18px;
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 153px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 36px;
+
+  @media (max-width: $bp-mobile) {
+    gap: 83px;
+    padding-bottom: 56px;
+  }
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  display: block;
+  width: 189px;
+  height: 55px;
+  object-fit: contain;
+  object-position: left center;
+  max-width: none;
+
+  @media (max-width: $bp-mobile) {
+    width: 103px;
+    height: 30px;
+  }
+}
