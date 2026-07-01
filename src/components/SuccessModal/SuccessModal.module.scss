@@ -1,0 +1,153 @@
+@use "../../styles/variables" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 466px;
+  padding: 56px 48px 48px;
+  background: $bg-white;
+  border: 1px solid $color-border;
+  text-align: left;
+  animation: slideUp 0.25s ease;
+
+  @media (max-width: $bp-mobile) {
+    padding: 40px 24px 32px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 1px;
+      background: $color-black;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.dot {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-bottom: 24px;
+  background: $color-black;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.1;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-sub;
+  }
+}
+
+.text {
+  margin: 0 0 32px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $color-gray;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-card-title;
+  }
+}
+
+.action {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  border: 1px solid $color-black;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 20px;
+  color: $color-black;
+  background: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    background: $color-black;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

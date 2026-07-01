@@ -1,55 +1,55 @@
-$font-primary: 'PP Neue Montreal', 'Helvetica Neue', Arial, sans-serif;
+$font-primary: "PP Neue Montreal", "Helvetica Neue", Arial, sans-serif;
 
-$color-white:       #ffffff;
-$color-black:       #000000;
-$color-gray:        #737373;
-$color-border:      #cac5c5;
-$color-accent:      #654d9b;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #737373;
+$color-border: #cac5c5;
+$color-accent: #654d9b;
 
-$bg-white:          #ffffff;
-$bg-light-blue:     #f8f9ff;
-$bg-light-purple:   #fcf8ff;
-$bg-light-teal:     #f8feff;
-$bg-cyan:           #baf1fa;
-$bg-card:           #f4f1f1;
+$bg-white: #ffffff;
+$bg-light-blue: #f8f9ff;
+$bg-light-purple: #fcf8ff;
+$bg-light-teal: #f8feff;
+$bg-cyan: #baf1fa;
+$bg-card: #f4f1f1;
 
-$grid-margin:       8.3333%;
-$grid-col:          8.3333%;
+$grid-margin: 8.3333%;
+$grid-col: 8.3333%;
 
-$content-pad-x:           clamp(53px, calc(16.59vw - 116.8px), 122px);
-$content-pad-x-mobile:    clamp(20px, 5.5vw, 53px);
+$content-pad-x: clamp(53px, calc(16.59vw - 116.8px), 122px);
+$content-pad-x-mobile: clamp(20px, 5.5vw, 53px);
 
-$header-pad-x:            clamp(53px, calc(16.59vw - 116.8px), 122px);
-$header-pad-left-mobile:  clamp(20px, 5.5vw, 53px);
+$header-pad-x: clamp(53px, calc(16.59vw - 116.8px), 122px);
+$header-pad-left-mobile: clamp(20px, 5.5vw, 53px);
 $header-pad-right-mobile: 32px;
-$header-pad-top:          58px;
-$header-pad-top-mobile:   26px;
+$header-pad-top: 58px;
+$header-pad-top-mobile: 26px;
 
-$bp-mobile:         1024px;
-$bp-nav:            1024px;
-$bp-tablet:         1024px;
-$bp-desktop:        1440px;
+$bp-mobile: 1024px;
+$bp-nav: 1024px;
+$bp-tablet: 1024px;
+$bp-desktop: 1440px;
 
-$text-display-xl:   125px;
-$text-display-lg:   70px;
-$text-display-md:   60px;
-$text-display-sm:   36px;
-$text-button:       28px;
-$text-nav:          20px;
-$text-small:        14px;
+$text-display-xl: clamp(125px, calc(125px + (100vw - 1440px) * 0.02411), 152px);
+$text-display-lg: clamp(70px, calc(70px + (100vw - 1440px) * 0.01339), 85px);
+$text-display-md: clamp(60px, calc(60px + (100vw - 1440px) * 0.01161), 73px);
+$text-display-sm: clamp(36px, calc(36px + (100vw - 1440px) * 0.00714), 44px);
+$text-button: clamp(28px, calc(28px + (100vw - 1440px) * 0.00536), 34px);
+$text-nav: 20px;
+$text-small: 14px;
 
-$text-mob-heading:      55px;
-$text-mob-body-lg:      30px;
-$text-mob-sub:          26px;
-$text-mob-body:         20px;
-$text-mob-card-title:   16px;
-$text-mob-card-label:   14px;
-$text-mob-button:       16px;
-$text-mob-small:        16px;
+$text-mob-heading: 55px;
+$text-mob-body-lg: 30px;
+$text-mob-sub: 26px;
+$text-mob-body: 20px;
+$text-mob-card-title: 16px;
+$text-mob-card-label: 14px;
+$text-mob-button: 16px;
+$text-mob-small: 16px;
 
-$lh-display:        90px;
-$lh-section:        80px;
-$lh-sub:            56px;
-$lh-body:           48px;
-$lh-mob:            48px;
-$lh-mob-body:       36px;
+$lh-display: 90px;
+$lh-section: 80px;
+$lh-sub: 56px;
+$lh-body: 48px;
+$lh-mob: 48px;
+$lh-mob-body: 36px;

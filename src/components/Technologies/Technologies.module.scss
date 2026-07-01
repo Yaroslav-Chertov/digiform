@@ -181,7 +181,7 @@
 
 .footnote {
   margin: 0;
-  max-width: 1190px;
+  max-width: clamp(1190px, calc(1190px + (100vw - 1440px) * 0.23571), 1454px);
   font-family: $font-primary;
   font-weight: 500;
   font-size: $text-display-sm;

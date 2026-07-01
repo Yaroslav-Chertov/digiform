@@ -1,0 +1,120 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  width: 100%;
+  background: $bg-white;
+  padding: 0;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 0 $content-pad-x;
+  padding-bottom: 30px;
+
+  @media (max-width: $bp-mobile) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 16px;
+    padding: 5px $content-pad-x-mobile 32px;
+    align-items: center;
+  }
+}
+
+.submitSlot {
+  display: none;
+
+  @media (max-width: $bp-mobile) {
+    display: block;
+    order: 1;
+  }
+}
+
+.replyLink {
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-nav;
+  line-height: 1.25;
+  color: $color-black;
+  text-decoration: none;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-card-title;
+    line-height: 1.13;
+    order: 4;
+  }
+}
+
+.contactGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactWork {
+  @media (max-width: $bp-mobile) {
+    order: 2;
+  }
+}
+
+.contactPhone {
+  @media (max-width: $bp-mobile) {
+    order: 3;
+  }
+}
+
+.contactLabel {
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-nav;
+  line-height: 1.2;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-card-title;
+    line-height: 1.13;
+  }
+}
+
+.contactValue {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: $text-nav;
+  line-height: 1.2;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-card-title;
+    line-height: 1.13;
+  }
+}
+
+.telegram {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: $text-nav;
+  line-height: 1.2;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-card-title;
+    line-height: 1.13;
+    order: 5;
+  }
+}
+
+.copyright {
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-nav;
+  line-height: 1.25;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-card-title;
+    line-height: 1.13;
+    order: 6;
+  }
+}
