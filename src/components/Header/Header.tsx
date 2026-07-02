@@ -4,33 +4,47 @@ import { useState, useEffect } from "react";
 import styles from "./Header.module.scss";
 
 const NAV_ITEMS = [
-  { label: "Агентство", active: true },
-  { label: "Позиционирование" },
-  { label: "Подход" },
-  { label: "Услуги" },
-  { label: "Технологии" },
-  { label: "Результаты" },
-  { label: "Контакты" },
+  { label: "Агентство", id: "agency", active: true },
+  { label: "Позиционирование", id: "positioning" },
+  { label: "Подход", id: "approach" },
+  { label: "Услуги", id: "services" },
+  { label: "Технологии", id: "technologies" },
+  { label: "Результаты", id: "results" },
+  { label: "Контакты", id: "contacts" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 8);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (menuOpen) {
       const scrollY = window.scrollY;
+
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
     } else {
       const top = document.body.style.top;
+
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
+
       if (top) {
         window.scrollTo({
-          top: parseInt(top || "0") * -1,
-          left: 0,
+          top: parseInt(top) * -1,
           behavior: "instant",
         });
       }
@@ -38,13 +52,14 @@ export default function Header() {
 
     return () => {
       const top = document.body.style.top;
+
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
+
       if (top) {
         window.scrollTo({
-          top: parseInt(top || "0") * -1,
-          left: 0,
+          top: parseInt(top) * -1,
           behavior: "instant",
         });
       }
@@ -52,7 +67,9 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}
+    >
       <div className={styles.inner}>
         <a href="/" className={styles.logo} aria-label="Digiform — на главную">
           <img src="/images/logo.png" alt="Digiform" width={68} height={52} />
@@ -61,12 +78,15 @@ export default function Header() {
         <nav className={styles.nav} aria-label="Основная навигация">
           <ul className={styles.navList}>
             {NAV_ITEMS.map((item) => (
-              <li key={item.label} className={styles.navItem}>
+              <li key={item.id} className={styles.navItem}>
                 <a
-                  href={`#${item.label.toLowerCase()}`}
-                  className={`${styles.navLink} ${item.active ? styles.navLinkActive : ""}`}
+                  href={`#${item.id}`}
+                  className={`${styles.navLink} ${
+                    item.active ? styles.navLinkActive : ""
+                  }`}
                 >
                   {item.label}
+
                   {item.active && (
                     <span className={styles.activeDot} aria-hidden="true" />
                   )}
@@ -92,14 +112,16 @@ export default function Header() {
       </div>
 
       <nav
-        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}
+        className={`${styles.mobileMenu} ${
+          menuOpen ? styles.mobileMenuOpen : ""
+        }`}
         aria-hidden={!menuOpen}
       >
         <ul className={styles.mobileNavList}>
           {NAV_ITEMS.map((item) => (
-            <li key={item.label}>
+            <li key={item.id}>
               <a
-                href={`#${item.label.toLowerCase()}`}
+                href={`#${item.id}`}
                 className={styles.mobileNavLink}
                 onClick={() => setMenuOpen(false)}
               >

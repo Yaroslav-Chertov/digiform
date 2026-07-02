@@ -16,9 +16,8 @@ export default function Hero() {
               <span className={styles.headingBrand}>Digiform</span>
               <span className={styles.headingDash}>{" — "}</span>
               <span className={styles.headingBody}>
-                digital-агентство{" "}
-                <br />с <strong>15-летним опытом</strong> и технологическим{" "}
-                <br />
+                digital-агентство <br />с <strong>15-летним опытом</strong> и
+                технологическим <br />
                 подходом к маркетингу
               </span>
             </h1>
@@ -26,8 +25,8 @@ export default function Hero() {
 
           <Reveal delay={120}>
             <p className={styles.agencySubtitle}>
-              Объединяем стратегию, креатив, технологии{" "}
-              <br />и аналитику в <strong>единую систему роста.</strong>
+              Объединяем стратегию, креатив, технологии <br />и аналитику в{" "}
+              <strong>единую систему роста.</strong>
             </p>
           </Reveal>
 

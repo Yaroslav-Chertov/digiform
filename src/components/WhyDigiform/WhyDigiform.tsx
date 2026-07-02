@@ -100,7 +100,7 @@ export default function WhyDigiform() {
           </Reveal>
         </div>
 
-        <div className={styles.right}>
+        <div id="contact" className={styles.right}>
           <Reveal delay={80}>
             <h2 className={styles.formHeading}>
               Обсудим

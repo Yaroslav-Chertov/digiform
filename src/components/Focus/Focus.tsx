@@ -11,7 +11,11 @@ const METRICS = [
 
 export default function Focus() {
   return (
-    <section className={styles.focus} aria-label="Фокус на результате">
+    <section
+      id="results"
+      className={styles.focus}
+      aria-label="Фокус на результате"
+    >
       <Parallax className={styles.rings} speed={0.12}>
         <img src="/images/focus-3d.png" alt="" width={920} height={920} />
       </Parallax>

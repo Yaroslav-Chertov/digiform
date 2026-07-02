@@ -7,7 +7,7 @@ interface FooterProps {
 
 export default function Footer({ submitSlot }: FooterProps) {
   return (
-    <footer className={styles.footer}>
+    <footer id="contacts" className={styles.footer}>
       <div className={styles.inner}>
         {submitSlot && <div className={styles.submitSlot}>{submitSlot}</div>}
 
