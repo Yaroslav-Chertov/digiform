@@ -81,8 +81,7 @@ export default function WhyDigiform() {
             <h2 className={styles.heading}>
               Почему
               <br />
-              Digiform
-              <span className={styles.dot} aria-hidden="true" />
+              Digiform<span className={styles.dot} aria-hidden="true" />
             </h2>
           </Reveal>
 

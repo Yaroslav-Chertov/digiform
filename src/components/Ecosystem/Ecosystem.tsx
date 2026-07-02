@@ -103,8 +103,7 @@ export default function Ecosystem() {
           <h2 className={styles.heading}>
             <span className={styles.headingBig}>Экосистема</span>{" "}
             <span className={styles.headingSmall}>
-              роста&nbsp;Digiform
-              <span className={styles.dot} aria-hidden="true" />
+              роста&nbsp;Digiform<span className={styles.dot} aria-hidden="true" />
             </span>
           </h2>
         </Reveal>

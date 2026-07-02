@@ -25,8 +25,7 @@ export default function Focus() {
             <span className={styles.headingBig}>Фокус</span>
             <br />
             <span className={styles.headingSmall}>
-              на&nbsp;результате
-              <span className={styles.dot} aria-hidden="true" />
+              на&nbsp;результате<span className={styles.dot} aria-hidden="true" />
             </span>
           </h2>
         </Reveal>

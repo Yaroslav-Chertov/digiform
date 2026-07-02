@@ -7,6 +7,7 @@
 
   @media (max-width: $bp-mobile) {
     padding: 60px 0 0;
+    background: $bg-white;
   }
 }
 
@@ -37,13 +38,14 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-left: -3px;
+  margin-left: -6px;
   background: $color-black;
   vertical-align: text-bottom;
 
   @media (max-width: $bp-mobile) {
     width: 9px;
     height: 9px;
+    margin-bottom: 5px;
   }
 }
 
@@ -82,24 +84,63 @@
   }
 }
 
+.logosWrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 0 36px;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+
+  @media (max-width: $bp-mobile) {
+    padding-bottom: 56px;
+  }
+}
+
 .logos {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: max-content;
   gap: 153px;
   list-style: none;
   margin: 0;
-  padding: 0 0 36px;
+  padding: 0;
+  animation: clientsMarquee 26s linear infinite;
 
   @media (max-width: $bp-mobile) {
     gap: 83px;
-    padding-bottom: 56px;
+    animation-duration: 18s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes clientsMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
 .logoItem {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .logoImg {

@@ -1,21 +1,23 @@
-import { Reveal } from '@/components/Reveal/Reveal';
-import styles from './Clients.module.scss';
+import { Reveal } from "@/components/Reveal/Reveal";
+import styles from "./Clients.module.scss";
 
 const TAGS = [
-  'FMCG',
-  'E-commerce',
-  'Retail',
-  'Pharm',
-  'Development',
-  'Finance',
-  'Производители',
+  "FMCG",
+  "E-commerce",
+  "Retail",
+  "Pharm",
+  "Finance",
+  "Development",
+  "Производители",
 ];
 
 const LOGOS = [
-  { src: '/images/logo-osnova.png', alt: 'Основа' },
-  { src: '/images/logo-dr-theiss.png', alt: 'Dr. Theiss' },
-  { src: '/images/logo-bausch.png', alt: 'Bausch Health' },
+  { src: "/images/logo-osnova.png", alt: "Основа" },
+  { src: "/images/logo-dr-theiss.png", alt: "Dr. Theiss" },
+  { src: "/images/logo-bausch.png", alt: "Bausch Health" },
 ];
+
+const LOGOS_SLIDE = [...LOGOS, ...LOGOS, ...LOGOS];
 
 export default function Clients() {
   return (
@@ -40,17 +42,24 @@ export default function Clients() {
           </ul>
         </Reveal>
 
-        <ul className={styles.logos} aria-label="Клиенты">
-          {LOGOS.map((logo) => (
-            <li key={logo.alt} className={styles.logoItem}>
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className={styles.logoImg}
-              />
-            </li>
-          ))}
-        </ul>
+        <div className={styles.logosWrap} aria-label="Клиенты">
+          <ul className={styles.logos}>
+            {LOGOS_SLIDE.map((logo, index) => (
+              <li key={`logo-a-${index}`} className={styles.logoItem}>
+                <img src={logo.src} alt={logo.alt} className={styles.logoImg} />
+              </li>
+            ))}
+            {LOGOS_SLIDE.map((logo, index) => (
+              <li
+                key={`logo-b-${index}`}
+                className={styles.logoItem}
+                aria-hidden="true"
+              >
+                <img src={logo.src} alt="" className={styles.logoImg} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

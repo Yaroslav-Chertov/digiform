@@ -18,8 +18,7 @@ export default function Technologies() {
               <span className={styles.headingBig}>Технологии</span>
               <br />
               <span className={styles.headingSmall}>
-                Digiform
-                <span className={styles.dot} aria-hidden="true" />
+                Digiform<span className={styles.dot} aria-hidden="true" />
               </span>
             </h2>
             <p className={styles.intro}>

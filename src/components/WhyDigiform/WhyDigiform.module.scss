@@ -6,7 +6,7 @@
   padding: 74px 0 32px;
 
   @media (max-width: $bp-mobile) {
-    padding: 60px 0 30px;
+    padding: 24px 0 30px;
   }
 }
 
@@ -51,14 +51,15 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-left: -3px;
+  margin-left: -6px;
   background: $color-black;
   vertical-align: text-bottom;
 
   @media (max-width: $bp-mobile) {
     width: 9px;
     height: 9px;
-    margin-bottom: 0;
+    margin-left: -3px;
+    margin-bottom: 5px;
   }
 }
 
