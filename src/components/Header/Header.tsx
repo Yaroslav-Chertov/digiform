@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import styles from './Header.module.scss';
+import { useState, useEffect } from "react";
+import styles from "./Header.module.scss";
 
 const NAV_ITEMS = [
-  { label: 'Агентство', active: true },
-  { label: 'Позиционирование' },
-  { label: 'Подход' },
-  { label: 'Услуги' },
-  { label: 'Технологии' },
-  { label: 'Результаты' },
-  { label: 'Контакты' },
+  { label: "Агентство", active: true },
+  { label: "Позиционирование" },
+  { label: "Подход" },
+  { label: "Услуги" },
+  { label: "Технологии" },
+  { label: "Результаты" },
+  { label: "Контакты" },
 ];
 
 export default function Header() {
@@ -19,26 +19,34 @@ export default function Header() {
   useEffect(() => {
     if (menuOpen) {
       const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
+      document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
+      document.body.style.width = "100%";
     } else {
       const top = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
       if (top) {
-        window.scrollTo(0, parseInt(top || '0') * -1);
+        window.scrollTo({
+          top: parseInt(top || "0") * -1,
+          left: 0,
+          behavior: "instant",
+        });
       }
     }
 
     return () => {
       const top = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
       if (top) {
-        window.scrollTo(0, parseInt(top || '0') * -1);
+        window.scrollTo({
+          top: parseInt(top || "0") * -1,
+          left: 0,
+          behavior: "instant",
+        });
       }
     };
   }, [menuOpen]);
@@ -56,7 +64,7 @@ export default function Header() {
               <li key={item.label} className={styles.navItem}>
                 <a
                   href={`#${item.label.toLowerCase()}`}
-                  className={`${styles.navLink} ${item.active ? styles.navLinkActive : ''}`}
+                  className={`${styles.navLink} ${item.active ? styles.navLinkActive : ""}`}
                 >
                   {item.label}
                   {item.active && (
@@ -69,9 +77,9 @@ export default function Header() {
         </nav>
 
         <button
-          className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+          className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
+          aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
           aria-expanded={menuOpen}
         >
           <span className={styles.burgerCircle} aria-hidden="true" />
@@ -84,7 +92,7 @@ export default function Header() {
       </div>
 
       <nav
-        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}
+        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}
         aria-hidden={!menuOpen}
       >
         <ul className={styles.mobileNavList}>
