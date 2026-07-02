@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
-import styles from './Reveal.module.scss';
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import styles from "./Reveal.module.scss";
 
 interface RevealProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface RevealProps {
   className?: string;
 }
 
-export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
+export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -18,7 +18,7 @@ export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
     if (!el) return;
 
     const prefersReduced = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReduced) {
       setVisible(true);
@@ -40,7 +40,7 @@ export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
     );
 
     observer.observe(el);
@@ -50,7 +50,7 @@ export function Reveal({ children, delay = 0, className = '' }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={`${styles.reveal} ${visible ? styles.visible : ''} ${className}`}
+      className={`${styles.reveal} ${visible ? styles.visible : ""} ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
