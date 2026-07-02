@@ -14,18 +14,17 @@ export default function Hero() {
           <Reveal>
             <h1 className={styles.agencyHeading}>
               <span className={styles.headingBrand}>Digiform</span>
-              <span className={styles.headingDash}>{" — "}</span>
+              <span className={styles.headingDash}>{" — "}</span>
               <span className={styles.headingBody}>
-                digital-агентство <br />с <strong>15-летним опытом</strong> и
-                технологическим <br />
-                подходом к маркетингу
+                digital-агентство с&nbsp;<strong>15-летним опытом</strong>{" "}
+                и&nbsp;технологическим подходом к&nbsp;маркетингу
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={120}>
             <p className={styles.agencySubtitle}>
-              Объединяем стратегию, креатив, технологии <br />и аналитику в{" "}
+              Объединяем стратегию, креатив, технологии и&nbsp;аналитику в{" "}
               <strong>единую систему роста.</strong>
             </p>
           </Reveal>
@@ -43,16 +42,13 @@ export default function Hero() {
           <Reveal>
             <div className={styles.marketingHeadingWrap}>
               <p className={styles.marketingHeading}>
-                <span className={styles.marketingBrand}>Digiform</span>
+                <span className={styles.marketingBrand}>Digiform</span>{" "}
                 <span className={styles.marketingBody}>
-                  {" "}
-                  строит маркетинг
-                  <br />
-                  на данных реальных продаж. Помогаем брендам{" "}
+                  строит маркетинг на&nbsp;данных реальных продаж. Помогаем
+                  брендам{" "}
                 </span>
                 <strong className={styles.marketingBold}>
-                  управлять спросом
-                  <br />и увеличивать выручку
+                  управлять спросом и&nbsp;увеличивать выручку
                   <span className={styles.marketingDot} aria-hidden="true" />
                 </strong>
               </p>
