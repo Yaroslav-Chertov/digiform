@@ -9,7 +9,11 @@ export default function Hero() {
         <img src="/images/hero-3d.png" alt="" />
       </Parallax>
 
-      <section className={styles.heroAgency} aria-label="О агентстве">
+      <section
+        id="agency"
+        className={styles.heroAgency}
+        aria-label="О агентстве"
+      >
         <div className={styles.agencyContent}>
           <Reveal>
             <h1 className={styles.agencyHeading}>
@@ -37,7 +41,11 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className={styles.heroMarketing} aria-label="Подход">
+      <section
+        id="positioning"
+        className={styles.heroMarketing}
+        aria-label="Подход"
+      >
         <div className={styles.marketingContent}>
           <Reveal>
             <div className={styles.marketingHeadingWrap}>
@@ -48,7 +56,8 @@ export default function Hero() {
                   брендам{" "}
                 </span>
                 <strong className={styles.marketingBold}>
-                  управлять спросом и&nbsp;увеличивать выручку<span className={styles.marketingDot} aria-hidden="true" />
+                  управлять спросом и&nbsp;увеличивать выручку
+                  <span className={styles.marketingDot} aria-hidden="true" />
                 </strong>
               </p>
             </div>

@@ -218,3 +218,34 @@
     opacity: 0.6;
   }
 }
+
+.mobileNavLink {
+  font-family: $font-primary;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $color-black;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 8px 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.mobileNavLinkActive {
+  font-style: italic;
+}
+
+.mobileActiveDot {
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin-left: -5px;
+  background: $color-black;
+  flex-shrink: 0;
+  margin-top: 8px;
+}

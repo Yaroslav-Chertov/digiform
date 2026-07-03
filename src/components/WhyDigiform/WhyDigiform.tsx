@@ -81,7 +81,8 @@ export default function WhyDigiform() {
             <h2 className={styles.heading}>
               Почему
               <br />
-              Digiform<span className={styles.dot} aria-hidden="true" />
+              Digiform
+              <span className={styles.dot} aria-hidden="true" />
             </h2>
           </Reveal>
 
@@ -99,7 +100,7 @@ export default function WhyDigiform() {
           </Reveal>
         </div>
 
-        <div id="contact" className={styles.right}>
+        <div id="discuss" className={styles.right}>
           <Reveal delay={80}>
             <h2 className={styles.formHeading}>
               Обсудим

@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import styles from "./Header.module.scss";
 
 const NAV_ITEMS = [
-  { label: "Агентство", id: "agency", active: true },
   { label: "Позиционирование", id: "positioning" },
-  { label: "Подход", id: "approach" },
   { label: "Услуги", id: "services" },
   { label: "Технологии", id: "technologies" },
   { label: "Результаты", id: "results" },
+  { label: "Кейсы", id: "clients" },
+  { label: "Обсудить задачу", id: "discuss", active: true },
   { label: "Контакты", id: "contacts" },
 ];
 
@@ -122,10 +122,16 @@ export default function Header() {
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={styles.mobileNavLink}
+                className={`${styles.mobileNavLink} ${
+                  item.active ? styles.mobileNavLinkActive : ""
+                }`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}
+
+                {item.active && (
+                  <span className={styles.mobileActiveDot} aria-hidden="true" />
+                )}
               </a>
             </li>
           ))}
