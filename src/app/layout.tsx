@@ -1,10 +1,74 @@
-import type { Metadata } from 'next';
-import './globals.scss';
+import type { Metadata } from "next";
+import "./globals.scss";
+
+const siteUrl = "https://digiform.ru";
+const siteName = "Digiform";
+const title = "Digiform — digital-агентство полного цикла";
+const description =
+  "Digiform строит маркетинг на данных реальных продаж. Помогаем брендам управлять спросом и увеличивать выручку с помощью аналитики, креатива и собственных технологий.";
 
 export const metadata: Metadata = {
-  title: 'Digiform — digital-агентство',
-  description:
-    'Digiform строит маркетинг на данных реальных продаж. Помогаем брендам управлять спросом и увеличивать выручку.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s — Digiform",
+  },
+  description,
+  keywords: [
+    "digital-агентство",
+    "маркетинг на данных",
+    "performance-маркетинг",
+    "digital-маркетинг",
+    "Digiform",
+  ],
+  authors: [{ name: "Digiform" }],
+  creator: "Digiform",
+  publisher: "Digiform",
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    url: siteUrl,
+    siteName,
+    title,
+    description,
+    images: [
+      {
+        url: "/images/og-cover.png",
+        width: 1200,
+        height: 630,
+        alt: siteName,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/og-cover.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

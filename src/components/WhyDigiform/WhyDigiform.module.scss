@@ -78,7 +78,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  max-width: clamp(466px, calc(466px + (100vw - 1440px) * 0.09196), 569px);
+  max-width: 100%;
 
   @media (max-width: $bp-mobile) {
     gap: 10px;
@@ -91,7 +91,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  max-width: clamp(466px, calc(466px + (100vw - 1440px) * 0.09196), 569px);
+  max-width: 100%;
   min-height: clamp(124px, calc(124px + (100vw - 1440px) * 0.025), 152px);
   padding: clamp(20px, calc(20px + (100vw - 1440px) * 0.00357), 24px)
     clamp(28px, calc(28px + (100vw - 1440px) * 0.00536), 34px);
@@ -104,15 +104,9 @@
   }
 
   @media (max-width: $bp-mobile) {
-    max-width: 100%;
+    max-width: min(342px, 100%);
     min-height: auto;
     padding: 16px 20px;
-
-    &:nth-child(2),
-    &:nth-child(4) {
-      align-self: flex-end;
-      width: calc(100% - 40px);
-    }
   }
 }
 
@@ -189,7 +183,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  max-width: clamp(466px, calc(466px + (100vw - 1440px) * 0.09196), 569px);
+  max-width: 100%;
 
   @media (max-width: $bp-mobile) {
     max-width: 100%;
@@ -274,7 +268,7 @@
 
 .consent {
   margin: 0;
-  max-width: clamp(466px, calc(466px + (100vw - 1440px) * 0.09196), 569px);
+  max-width: 100%;
   font-family: $font-primary;
   font-weight: 500;
   font-size: $text-small;
