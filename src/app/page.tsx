@@ -6,21 +6,12 @@ import Focus from "@/components/Focus/Focus";
 import Clients from "@/components/Clients/Clients";
 import WhyDigiform from "@/components/WhyDigiform/WhyDigiform";
 import Footer from "@/components/Footer/Footer";
-import styles from "./page.module.css";
-
-const MobileSubmit = () => (
-  <button
-    type="submit"
-    form="contact-form"
-    className={styles.mobileSubmit}
-  >
-    Отправить
-  </button>
-);
+import MobileSubmit from "@/components/Footer/MobileSubmit";
+import { FormStatusProvider } from "@/lib/FormStatusContext";
 
 export default function Home() {
   return (
-    <>
+    <FormStatusProvider>
       <Header />
       <main>
         <Hero />
@@ -31,6 +22,6 @@ export default function Home() {
         <WhyDigiform />
       </main>
       <Footer submitSlot={<MobileSubmit />} />
-    </>
+    </FormStatusProvider>
   );
 }

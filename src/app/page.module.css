@@ -29,3 +29,13 @@
 .mobileSubmit:hover::after {
   opacity: 1;
 }
+
+.mobileSubmit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mobileSubmit:disabled::after {
+  opacity: 0;
+}

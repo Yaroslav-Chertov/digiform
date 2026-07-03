@@ -11,6 +11,7 @@ import {
   type ContactFormErrors,
 } from "@/lib/validation";
 import { sendContactForm, FormSubmitError } from "@/lib/sendForm";
+import { useFormStatus } from "@/lib/FormStatusContext";
 import styles from "./WhyDigiform.module.scss";
 
 const REASONS = [
@@ -31,7 +32,7 @@ const INITIAL_DATA: ContactFormData = {
 export default function WhyDigiform() {
   const [data, setData] = useState<ContactFormData>(INITIAL_DATA);
   const [errors, setErrors] = useState<ContactFormErrors>({});
-  const [submitting, setSubmitting] = useState(false);
+  const { submitting, setSubmitting } = useFormStatus();
   const [submitError, setSubmitError] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
 
