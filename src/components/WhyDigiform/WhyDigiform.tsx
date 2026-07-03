@@ -104,6 +104,7 @@ export default function WhyDigiform() {
           <Reveal delay={80}>
             <h2 className={styles.formHeading}>
               Обсудим
+              <span className={styles.dot} aria-hidden="true" />
               <br />
               задачу
             </h2>
@@ -296,8 +297,8 @@ export default function WhyDigiform() {
               </div>
 
               <p className={styles.consent}>
-                Нажав кнопку «Отправить», вы даёте согласие на обработку
-                персональных данных и соглашаетесь с{" "}
+                Нажав кнопку &laquo;Отправить&raquo;, вы&nbsp;даёте согласие
+                на&nbsp;обработку персональных данных и&nbsp;соглашаетесь&nbsp;с{" "}
                 <a
                   href="/privacy"
                   className={styles.consentLink}
