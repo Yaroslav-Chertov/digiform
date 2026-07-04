@@ -45,6 +45,11 @@
     line-height: 1.13;
     order: 4;
   }
+
+  @media (max-width: $bp-small-mobile) {
+    font-size: 13px;
+    line-height: 1.15;
+  }
 }
 
 .contactGroup {
@@ -76,6 +81,11 @@
     font-size: $text-mob-card-title;
     line-height: 1.13;
   }
+
+  @media (max-width: $bp-small-mobile) {
+    font-size: 13px;
+    line-height: 1.15;
+  }
 }
 
 .contactValue {
@@ -88,6 +98,11 @@
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-card-title;
     line-height: 1.13;
+  }
+
+  @media (max-width: $bp-small-mobile) {
+    font-size: 13px;
+    line-height: 1.15;
   }
 }
 
@@ -103,6 +118,11 @@
     line-height: 1.13;
     order: 5;
   }
+
+  @media (max-width: $bp-small-mobile) {
+    font-size: 13px;
+    line-height: 1.15;
+  }
 }
 
 .copyright {
@@ -116,5 +136,10 @@
     font-size: $text-mob-card-title;
     line-height: 1.13;
     order: 6;
+  }
+
+  @media (max-width: $bp-small-mobile) {
+    font-size: 13px;
+    line-height: 1.15;
   }
 }
