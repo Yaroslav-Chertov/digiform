@@ -168,7 +168,7 @@
     font-size: $text-mob-body;
     line-height: 1.8;
     margin-bottom: 32px;
-    margin-left: 155px;
+    margin-left: clamp(40px, calc(155px + (100vw - 480px) * 0.71875), 155px);
 
     strong {
       font-weight: 500;
@@ -215,7 +215,7 @@
   }
 
   @media (max-width: $bp-mobile) {
-    font-size: 26px;
+    font-size: $text-mob-field;
     line-height: 0.96;
   }
 }
@@ -239,7 +239,7 @@
   }
 
   @media (max-width: $bp-mobile) {
-    font-size: 26px;
+    font-size: $text-mob-field;
     line-height: 0.96;
   }
 }

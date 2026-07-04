@@ -95,7 +95,7 @@
     margin: 0;
     font-size: $text-mob-body;
     line-height: 1.5;
-    margin-left: 100px;
+    margin-left: clamp(30px, calc(100px + (100vw - 480px) * 0.4375), 100px);
   }
 }
 

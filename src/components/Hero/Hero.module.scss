@@ -275,7 +275,7 @@
     grid-template-columns: 1fr;
     gap: 8px;
     padding-top: 0;
-    padding-left: 100px;
+    padding-left: clamp(30px, calc(100px + (100vw - 480px) * 0.4375), 100px);
   }
 }
 
