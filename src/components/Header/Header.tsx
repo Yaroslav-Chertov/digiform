@@ -4,10 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./Header.module.scss";
 
 const NAV_ITEMS = [
-  { label: "Позиционирование", id: "positioning" },
+  { label: "О нас", id: "about" },
   { label: "Услуги", id: "services" },
-  { label: "Технологии", id: "technologies" },
-  { label: "Результаты", id: "results" },
+  { label: "Подход", id: "technologies" },
   { label: "Кейсы", id: "clients" },
   { label: "Обсудить задачу", id: "discuss", active: true },
   { label: "Контакты", id: "contacts" },

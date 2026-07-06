@@ -10,7 +10,7 @@ export default function Hero() {
       </Parallax>
 
       <section
-        id="agency"
+        id="about"
         className={styles.heroAgency}
         aria-label="О агентстве"
       >
@@ -20,7 +20,7 @@ export default function Hero() {
               <span className={styles.headingBrand}>Digiform</span>
               <span className={styles.headingDash}>{" — "}</span>
               <span className={styles.headingBody}>
-                digital-агентство с&nbsp;<strong>15-летним опытом</strong>{" "}
+                диджитал креативное агентство с&nbsp;<strong>15-летним опытом</strong>{" "}
                 и&nbsp;технологическим подходом к&nbsp;маркетингу
               </span>
             </h1>
@@ -41,11 +41,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <section
-        id="positioning"
-        className={styles.heroMarketing}
-        aria-label="Подход"
-      >
+      <section className={styles.heroMarketing} aria-label="Подход">
         <div className={styles.marketingContent}>
           <Reveal>
             <div className={styles.marketingHeadingWrap}>
