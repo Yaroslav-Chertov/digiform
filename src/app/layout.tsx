@@ -3,9 +3,9 @@ import "./globals.scss";
 
 const siteUrl = "https://digiform.ru";
 const siteName = "Digiform";
-const title = "Digiform — digital-агентство полного цикла";
+const title = "Digiform — диджитал креативное агентство полного цикла";
 const description =
-  "Digiform строит маркетинг на данных реальных продаж. Помогаем брендам управлять спросом и увеличивать выручку с помощью аналитики, креатива и собственных технологий.";
+  "Digiform — диджитал креативное агентство с 15-летним опытом и технологическим подходом к маркетингу.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

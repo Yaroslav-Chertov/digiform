@@ -116,11 +116,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  animation: clientsMarquee 26s linear infinite;
+  animation: clientsMarquee 42s linear infinite;
 
   @media (max-width: $bp-mobile) {
     gap: 83px;
-    animation-duration: 18s;
+    animation-duration: 30s;
   }
 
   @media (prefers-reduced-motion: reduce) {

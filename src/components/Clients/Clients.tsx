@@ -12,12 +12,23 @@ const TAGS = [
 ];
 
 const LOGOS = [
-  { src: "/images/logo-osnova.png", alt: "Основа" },
-  { src: "/images/logo-dr-theiss.png", alt: "Dr. Theiss" },
   { src: "/images/logo-bausch.png", alt: "Bausch Health" },
+  { src: "/images/logo-5ka.png", alt: "Пятёрочка" },
+  { src: "/images/logo-dr-theiss.png", alt: "Dr. Theiss" },
+  { src: "/images/logo-castorama.png", alt: "Castorama" },
+  { src: "/images/logo-boiron.png", alt: "Boiron" },
+  { src: "/images/logo-sberhealth.png", alt: "СберЗдоровье" },
+  { src: "/images/logo-chromolab.png", alt: "Chromolab" },
+  { src: "/images/logo-delimobil.png", alt: "Делимобиль" },
+  { src: "/images/logo-bayer.png", alt: "Bayer" },
+  { src: "/images/logo-osnova.png", alt: "ГК Основа" },
+  { src: "/images/logo-svetocopy.png", alt: "Sveto Copy" },
+  { src: "/images/logo-borjomi.png", alt: "Borjomi" },
+  { src: "/images/logo-rt.png", alt: "Ростелеком" },
+  { src: "/images/logo-svyaz-bank.png", alt: "Связь-Банк" },
 ];
 
-const LOGOS_SLIDE = [...LOGOS, ...LOGOS, ...LOGOS];
+const LOGOS_SLIDE = [...LOGOS, ...LOGOS];
 
 export default function Clients() {
   return (
