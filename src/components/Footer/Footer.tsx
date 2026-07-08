@@ -22,12 +22,17 @@ export default function Footer({ submitSlot }: FooterProps) {
 
         <div className={`${styles.contactGroup} ${styles.contactPhone}`}>
           <span className={styles.contactLabel}>Телефон:</span>
-          <a href="tel:+79999999999" className={styles.contactValue}>
-            (999)999-99-99
+          <a href="tel:+74958000078" className={styles.contactValue}>
+            (495)800-00-78
           </a>
         </div>
 
-        <a href="#" className={styles.telegram}>
+        <a
+          href="https://t.me/av_digital"
+          className={styles.telegram}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Telegram
         </a>
 
