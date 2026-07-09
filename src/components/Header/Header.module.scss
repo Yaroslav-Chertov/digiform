@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $header-pad-top $header-pad-x 0;
+  padding: 26px $header-pad-x 0;
 
   @media (max-width: $bp-mobile) {
     padding: $header-pad-top-mobile $header-pad-right-mobile 0

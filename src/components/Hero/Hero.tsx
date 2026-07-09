@@ -34,7 +34,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={240}>
-            <a href="#contact" className={styles.ctaButton}>
+            <a href="#discuss" className={styles.ctaButton}>
               Обсудить проект
             </a>
           </Reveal>
