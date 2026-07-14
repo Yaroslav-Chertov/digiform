@@ -67,10 +67,35 @@
 
 .dot {
   display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-left: -3px;
-  margin-bottom: -7px;
+  width: 30px;
+  height: 30px;
+  margin-left: -4px;
+  margin-bottom: -17px;
+  background: $color-black;
+  vertical-align: text-bottom;
+
+  @media (max-width: $bp-mobile) {
+    width: 9px;
+    height: 9px;
+    margin-left: -3px;
+    margin-bottom: 0;
+  }
+}
+
+.right .dot {
+  display: none;
+
+  @media (max-width: $bp-mobile) {
+    display: inline-block;
+  }
+}
+
+.dotSecondary {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: -4px;
+  margin-bottom: -17px;
   background: $color-black;
   vertical-align: text-bottom;
 
@@ -82,7 +107,7 @@
   }
 }
 
-.right .dot {
+.right .dotSecondary {
   display: none;
 
   @media (max-width: $bp-mobile) {

@@ -122,7 +122,7 @@ export default function WhyDigiform() {
           <Reveal delay={80}>
             <h2 className={styles.formHeading}>
               Обсудим
-              <span className={styles.dot} aria-hidden="true" />
+              <span className={styles.dotSecondary} aria-hidden="true" />
               <br />
               задачу
             </h2>
