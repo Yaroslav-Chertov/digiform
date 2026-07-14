@@ -31,11 +31,11 @@ $bp-tablet: 1024px;
 $bp-desktop: 1440px;
 $bp-small-mobile: 480px;
 
-$text-display-xl: clamp(125px, calc(125px + (100vw - 1440px) * 0.02411), 152px);
-$text-display-lg: clamp(70px, calc(70px + (100vw - 1440px) * 0.01339), 85px);
-$text-display-md: clamp(60px, calc(60px + (100vw - 1440px) * 0.01161), 73px);
-$text-display-sm: clamp(36px, calc(36px + (100vw - 1440px) * 0.00714), 44px);
-$text-button: clamp(28px, calc(28px + (100vw - 1440px) * 0.00536), 34px);
+$text-display-xl: clamp(88px, calc(88px + (100vw - 1440px) * 0.01688), 106px);
+$text-display-lg: clamp(49px, calc(49px + (100vw - 1440px) * 0.00937), 60px);
+$text-display-md: clamp(42px, calc(42px + (100vw - 1440px) * 0.00813), 51px);
+$text-display-sm: clamp(25px, calc(25px + (100vw - 1440px) * 0.005), 31px);
+$text-button: clamp(20px, calc(20px + (100vw - 1440px) * 0.00375), 24px);
 $text-nav: 20px;
 $text-small: 14px;
 
@@ -43,7 +43,7 @@ $text-mob-heading: clamp(42px, calc(55px + (100vw - 480px) * 0.08125), 55px);
 $text-mob-body-lg: clamp(24px, calc(30px + (100vw - 480px) * 0.0375), 30px);
 $text-mob-sub: clamp(21px, calc(26px + (100vw - 480px) * 0.03125), 26px);
 $text-mob-body: clamp(16px, calc(20px + (100vw - 480px) * 0.025), 20px);
-$text-mob-field: clamp(22px, calc(26px + (100vw - 480px) * 0.025), 26px);
+$text-mob-field: clamp(16px, calc(18px + (100vw - 480px) * 0.0125), 20px);
 $text-mob-card-title: clamp(14px, calc(16px + (100vw - 480px) * 0.0125), 16px);
 $text-mob-card-label: clamp(12px, calc(14px + (100vw - 480px) * 0.0125), 14px);
 $text-mob-button: clamp(14px, calc(16px + (100vw - 480px) * 0.0125), 16px);

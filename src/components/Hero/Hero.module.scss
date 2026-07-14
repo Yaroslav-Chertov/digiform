@@ -37,7 +37,7 @@
 .heroAgency {
   position: relative;
   width: 100%;
-  min-height: 800px;
+  min-height: 700px;
   background: $bg-white;
   padding-top: 80px;
 
@@ -187,7 +187,7 @@
 .heroMarketing {
   position: relative;
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   background: $bg-light-blue;
 
   @media (max-width: $bp-mobile) {
@@ -255,12 +255,12 @@
   height: 17px;
   background: $color-black;
   vertical-align: top;
-  margin-top: 20px;
+  margin-top: 10px;
 
   @media (max-width: $bp-mobile) {
     width: 9px;
     height: 9px;
-    margin-top: 10px;
+    margin-top: 11px;
   }
 }
 

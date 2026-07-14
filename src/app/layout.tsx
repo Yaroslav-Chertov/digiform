@@ -70,6 +70,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/NeueMontreal-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/NeueMontreal-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
