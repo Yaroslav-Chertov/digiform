@@ -116,7 +116,6 @@
   line-height: 1.56;
   color: $color-black;
   margin: 0 0 30px;
-  max-width: clamp(831px, calc(831px + (100vw - 1440px) * 0.16429), 1015px);
 
   strong {
     font-weight: 700;

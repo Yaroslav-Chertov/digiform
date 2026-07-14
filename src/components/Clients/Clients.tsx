@@ -20,10 +20,9 @@ const LOGOS = [
   { src: "/images/logo-sberhealth.png", alt: "СберЗдоровье" },
   { src: "/images/logo-chromolab.png", alt: "Chromolab" },
   { src: "/images/logo-delimobil.png", alt: "Делимобиль" },
+  { src: "/images/logo-amway.png", alt: "Amway" },
   { src: "/images/logo-bayer.png", alt: "Bayer" },
   { src: "/images/logo-osnova.png", alt: "ГК Основа" },
-  { src: "/images/logo-svetocopy.png", alt: "Sveto Copy" },
-  { src: "/images/logo-borjomi.png", alt: "Borjomi" },
   { src: "/images/logo-rt.png", alt: "Ростелеком" },
   { src: "/images/logo-svyaz-bank.png", alt: "Связь-Банк" },
 ];
