@@ -20,7 +20,7 @@
 }
 
 .heading {
-  margin: 0 0 90px;
+  margin: 0 0 70px;
   font-family: $font-primary;
   font-weight: 500;
   font-size: $text-display-xl;
@@ -30,7 +30,7 @@
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-heading;
     line-height: 0.87;
-    margin-bottom: 59px;
+    margin-bottom: 40px;
   }
 }
 

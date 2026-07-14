@@ -317,7 +317,8 @@ export default function WhyDigiform() {
 
               <p className={styles.consent}>
                 Нажав кнопку &laquo;Отправить&raquo;, вы&nbsp;даёте согласие
-                на&nbsp;обработку персональных данных и&nbsp;соглашаетесь&nbsp;с{" "}
+                на&nbsp;обработку персональных данных и&nbsp;соглашаетесь
+                с&nbsp;{" "}
                 <a
                   href="/privacy"
                   className={styles.consentLink}
