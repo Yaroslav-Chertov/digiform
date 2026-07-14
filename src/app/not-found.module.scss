@@ -1,0 +1,135 @@
+@use "../styles/variables" as *;
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: $bg-light-blue;
+  padding: calc(var(--header-height, 104px) + 40px) 0 100px;
+
+  @media (max-width: $bp-mobile) {
+    background: $bg-white;
+    padding: calc(var(--header-height, 78px) + 32px) 0 64px;
+  }
+}
+
+.inner {
+  width: 100%;
+  padding: 0 $content-pad-x;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: $bp-mobile) {
+    padding: 0 $content-pad-x-mobile;
+  }
+}
+
+.code {
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: $text-display-xl;
+  line-height: 1;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-heading;
+  }
+}
+
+.heading {
+  margin: 24px 0 0;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-display-sm;
+  line-height: 1.3;
+  color: $color-black;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-sub;
+    margin-top: 16px;
+  }
+}
+
+.description {
+  margin: 20px auto 0;
+  max-width: 560px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  color: $color-gray;
+
+  @media (max-width: $bp-mobile) {
+    font-size: $text-mob-body;
+    margin-top: 12px;
+  }
+}
+
+.actions {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @media (max-width: $bp-mobile) {
+    margin-top: 32px;
+    gap: 16px;
+  }
+}
+
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(266px, calc(266px + (100vw - 1440px) * 0.05089), 323px);
+  height: clamp(66px, calc(66px + (100vw - 1440px) * 0.0125), 80px);
+  border: 1px solid $color-black;
+  background: transparent;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-button;
+  color: $color-black;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: $color-black;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    @media (max-width: $bp-mobile) {
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  &:hover {
+    font-style: italic;
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  @media (max-width: $bp-mobile) {
+    width: 149px;
+    height: 40px;
+    font-size: $text-mob-button;
+    font-weight: 700;
+  }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type MouseEvent } from "react";
 import styles from "./Header.module.scss";
 
 const NAV_ITEMS = [
@@ -50,6 +50,46 @@ export default function Header() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const unlockBodyScroll = () => {
+    const top = document.body.style.top;
+
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+
+    if (top) {
+      window.scrollTo({
+        top: parseInt(top) * -1,
+        behavior: "instant",
+      });
+    }
+  };
+
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const headerHeight = headerRef.current?.offsetHeight ?? 0;
+    const top =
+      target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  const handleMobileNavClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    event.preventDefault();
+
+    unlockBodyScroll();
+    setMenuOpen(false);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => scrollToSection(id));
+    });
+  };
 
   useEffect(() => {
     if (menuOpen) {
@@ -149,7 +189,7 @@ export default function Header() {
                 className={`${styles.mobileNavLink} ${
                   item.active ? styles.mobileNavLinkActive : ""
                 }`}
-                onClick={() => setMenuOpen(false)}
+                onClick={(event) => handleMobileNavClick(event, item.id)}
               >
                 {item.label}
 
