@@ -19,7 +19,7 @@
 }
 
 .heading {
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   font-family: $font-primary;
   font-weight: 500;
   line-height: 0.72;
@@ -32,14 +32,17 @@
 
 .headingBig {
   font-size: $text-display-xl;
+  line-height: 0.64;
 
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-heading;
+    line-height: 0.9;
   }
 }
 
 .headingSmall {
   font-size: $text-display-md;
+  line-height: 1.2;
 
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-body-lg;

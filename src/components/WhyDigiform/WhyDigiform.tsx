@@ -95,10 +95,12 @@ export default function WhyDigiform() {
         <div className={styles.left}>
           <Reveal>
             <h2 className={styles.heading}>
-              Почему
+              <span className={styles.headingBig}>Почему</span>
               <br />
-              Digiform
-              <span className={styles.dot} aria-hidden="true" />
+              <span className={styles.headingSmall}>
+                Digiform
+                <span className={styles.dot} aria-hidden="true" />
+              </span>
             </h2>
           </Reveal>
 
