@@ -1,6 +1,12 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import {
+  useState,
+  useRef,
+  useEffect,
+  type ChangeEvent,
+  type FormEvent,
+} from "react";
 import { Reveal } from "@/components/Reveal/Reveal";
 import { SuccessModal } from "@/components/SuccessModal/SuccessModal";
 import {
@@ -35,14 +41,23 @@ export default function WhyDigiform() {
   const { submitting, setSubmitting } = useFormStatus();
   const [submitError, setSubmitError] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
+  const commentRef = useRef<HTMLTextAreaElement>(null);
 
   const handleChange =
-    (field: keyof ContactFormData) => (e: ChangeEvent<HTMLInputElement>) => {
+    (field: keyof ContactFormData) =>
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setData((prev) => ({ ...prev, [field]: e.target.value }));
       if (errors[field]) {
         setErrors((prev) => ({ ...prev, [field]: undefined }));
       }
     };
+
+  useEffect(() => {
+    const el = commentRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${el.scrollHeight}px`;
+  }, [data.comment]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -264,11 +279,12 @@ export default function WhyDigiform() {
               </div>
 
               <div className={styles.field}>
-                <input
+                <textarea
+                  ref={commentRef}
                   className={styles.fieldInput}
                   id="comment"
                   name="comment"
-                  type="text"
+                  rows={1}
                   placeholder=" "
                   maxLength={1000}
                   value={data.comment}

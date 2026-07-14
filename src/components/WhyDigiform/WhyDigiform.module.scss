@@ -12,9 +12,9 @@
 
 .inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.7fr 1fr;
   column-gap: clamp(80px, calc(80px + (100vw - 1440px) * 0.01607), 98px);
-  align-items: end;
+  align-items: start;
   padding: 0 $content-pad-x;
   padding-bottom: clamp(87px, calc(87px + (100vw - 1440px) * 0.01696), 106px);
 
@@ -33,7 +33,7 @@
 }
 
 .heading {
-  margin: 0 0 clamp(73px, 73px + (100vw - 1440px) * 0.0125, 78px);
+  margin: 0 0 clamp(36px, calc(36px + (100vw - 1440px) * 0.00625), 39px);
   font-family: $font-primary;
   font-weight: 500;
   font-size: $text-display-xl;
@@ -74,7 +74,7 @@
 .reasons {
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, calc(20px + (100vw - 1440px) * 0.00357), 24px);
+  gap: clamp(12px, calc(12px + (100vw - 1440px) * 0.00179), 14px);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -92,9 +92,9 @@
   justify-content: center;
   width: 100%;
   max-width: 100%;
-  min-height: clamp(124px, calc(124px + (100vw - 1440px) * 0.025), 152px);
-  padding: clamp(20px, calc(20px + (100vw - 1440px) * 0.00357), 24px)
-    clamp(28px, calc(28px + (100vw - 1440px) * 0.00536), 34px);
+  min-height: clamp(80px, calc(80px + (100vw - 1440px) * 0.0143), 96px);
+  padding: clamp(14px, calc(14px + (100vw - 1440px) * 0.00179), 16px)
+    clamp(20px, calc(20px + (100vw - 1440px) * 0.00286), 24px);
   border: 1px solid $color-border;
   border-radius: 10px;
 
@@ -137,7 +137,7 @@
 }
 
 .formHeading {
-  margin: 0 0 clamp(73px, calc(73px + (100vw - 1440px) * 0.00446), 29px);
+  margin: 0 0 clamp(9px, calc(9px + (100vw - 1440px) * 0.0009), 11px);
   font-family: $font-primary;
   font-weight: 500;
   font-size: $text-display-lg;
@@ -152,7 +152,7 @@
 }
 
 .formIntro {
-  margin: 0 0 clamp(48px, calc(48px + (100vw - 1440px) * 0.00982), 59px);
+  margin: 0 0 clamp(12px, calc(12px + (100vw - 1440px) * 0.00223), 15px);
   font-family: $font-primary;
   font-weight: 700;
   font-size: $text-display-sm;
@@ -192,21 +192,24 @@
 
 .field {
   position: relative;
-  padding: 15px 0 0;
-  margin-bottom: 17px;
+  padding: 11px 0 0;
+  margin-bottom: 12px;
 }
 
 .fieldInput {
   position: relative;
   z-index: 1;
   width: 100%;
+  display: block;
   border: none;
   outline: none;
   background: none;
   padding: 0;
+  resize: none;
+  overflow: hidden;
   font-family: $font-primary;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.04;
   color: $color-black;
 
@@ -222,12 +225,12 @@
 
 .fieldLabel {
   position: absolute;
-  top: 18px;
+  top: 14px;
   left: 0;
   z-index: 0;
   font-family: $font-primary;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.04;
   color: $color-black;
   pointer-events: none;
@@ -274,7 +277,7 @@
   font-size: $text-small;
   line-height: 1.57;
   color: $color-gray;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @media (max-width: $bp-mobile) {
     font-size: $text-mob-card-title;
