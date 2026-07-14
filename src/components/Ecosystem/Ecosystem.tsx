@@ -94,11 +94,10 @@ export default function Ecosystem() {
 
   return (
     <section
-      id="services"
       className={`${styles.ecosystem} ${showAll ? styles.showAll : ""}`}
       aria-label="Экосистема роста Digiform"
     >
-      <div className={styles.inner}>
+      <div className={styles.inner} id="services">
         <Reveal>
           <h2 className={styles.heading}>
             <span className={styles.headingBig}>Экосистема</span>

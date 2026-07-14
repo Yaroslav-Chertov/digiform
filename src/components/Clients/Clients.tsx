@@ -31,12 +31,8 @@ const LOGOS_SLIDE = [...LOGOS, ...LOGOS];
 
 export default function Clients() {
   return (
-    <section
-      id="clients"
-      className={styles.clients}
-      aria-label="С кем мы работаем"
-    >
-      <div className={styles.inner}>
+    <section className={styles.clients} aria-label="С кем мы работаем">
+      <div className={styles.inner} id="clients">
         <Reveal>
           <h2 className={styles.heading}>
             С&nbsp;кем

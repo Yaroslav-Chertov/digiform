@@ -61,7 +61,8 @@
 html {
   overflow-x: clip;
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height, 100px);
+  //scroll-padding-top: var(--header-height, 100px);
+  scroll-padding-top: 100px;
 
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;

@@ -10,12 +10,8 @@ const METRICS = [
 
 export default function Technologies() {
   return (
-    <section
-      id="technologies"
-      className={styles.technologies}
-      aria-label="Технологии Digiform"
-    >
-      <div className={styles.inner}>
+    <section className={styles.technologies} aria-label="Технологии Digiform">
+      <div className={styles.inner} id="technologies">
         <Reveal>
           <div className={styles.top}>
             <h2 className={styles.heading}>
