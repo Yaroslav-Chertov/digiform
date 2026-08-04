@@ -56,11 +56,11 @@
   gap: 16px;
   list-style: none;
   margin: 0;
-  padding: 0 0 90px;
+  padding: 0 0 70px;
 
   @media (max-width: $bp-mobile) {
     gap: 10px;
-    padding-bottom: 59px;
+    padding-bottom: 40px;
   }
 }
 
@@ -79,7 +79,7 @@
   border-radius: 10px;
 
   @media (max-width: $bp-mobile) {
-    font-size: $text-mob-sub;
+    font-size: 16px;
     line-height: 1.85;
     padding: 6px 18px;
   }
@@ -118,11 +118,11 @@
   margin: 0;
   padding: 0;
   will-change: transform;
-  animation: clientsMarquee 42s linear infinite;
+  animation: clientsMarquee 72s linear infinite;
 
   @media (max-width: $bp-mobile) {
     gap: 83px;
-    animation-duration: 30s;
+    animation-duration: 52s;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -156,5 +156,65 @@
   @media (max-width: $bp-mobile) {
     width: 103px;
     height: 30px;
+  }
+}
+
+.ctaWrap {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0 90px;
+
+  @media (max-width: $bp-mobile) {
+    padding: 0 0 58px;
+  }
+}
+
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(320px, calc(320px + (100vw - 1440px) * 0.05089), 380px);
+  height: clamp(66px, calc(66px + (100vw - 1440px) * 0.0125), 80px);
+  border: 1px solid $color-black;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: $text-button;
+  color: $color-black;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: $color-black;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    @media (max-width: $bp-mobile) {
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  &:hover {
+    font-style: italic;
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  @media (max-width: $bp-mobile) {
+    width: 200px;
+    height: 40px;
+    font-size: $text-mob-button;
+    font-weight: 700;
   }
 }

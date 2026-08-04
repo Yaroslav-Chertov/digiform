@@ -52,6 +52,14 @@ export default function Clients() {
           </ul>
         </Reveal>
 
+        <Reveal delay={180}>
+          <div className={styles.ctaWrap}>
+            <a href="#discuss" className={styles.ctaButton}>
+              Запросить презентацию
+            </a>
+          </div>
+        </Reveal>
+
         <div className={styles.logosWrap} aria-label="Клиенты">
           <ul className={styles.logos}>
             {LOGOS_SLIDE.map((logo, index) => (
