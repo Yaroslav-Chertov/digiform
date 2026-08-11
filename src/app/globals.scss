@@ -1,50 +1,30 @@
 @use "../styles/variables" as *;
 
 @font-face {
-  font-family: "PP Neue Montreal";
+  font-family: "Onest";
   src:
-    url("/fonts/NeueMontreal-Regular.woff2") format("woff2"),
-    url("/fonts/NeueMontreal-Regular.woff") format("woff");
+    url("/fonts/Onest-Regular.woff2") format("woff2"),
+    url("/fonts/Onest-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Neue Montreal";
+  font-family: "Onest";
   src:
-    url("/fonts/NeueMontreal-Italic.woff2") format("woff2"),
-    url("/fonts/NeueMontreal-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Neue Montreal";
-  src:
-    url("/fonts/NeueMontreal-Medium.woff2") format("woff2"),
-    url("/fonts/NeueMontreal-Medium.woff") format("woff");
+    url("/fonts/Onest-Medium.woff2") format("woff2"),
+    url("/fonts/Onest-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Neue Montreal";
+  font-family: "Onest";
   src:
-    url("/fonts/NeueMontreal-MediumItalic.woff2") format("woff2"),
-    url("/fonts/NeueMontreal-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Neue Montreal";
-  src:
-    url("/fonts/NeueMontreal-Bold.woff2") format("woff2"),
-    url("/fonts/NeueMontreal-Bold.woff") format("woff");
+    url("/fonts/Onest-Bold.woff2") format("woff2"),
+    url("/fonts/Onest-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
