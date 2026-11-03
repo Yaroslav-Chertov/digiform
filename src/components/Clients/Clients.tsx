@@ -25,6 +25,7 @@ const LOGOS = [
   { src: "/images/logo-osnova.png", alt: "ГК Основа" },
   { src: "/images/logo-rt.png", alt: "Ростелеком" },
   { src: "/images/logo-svyaz-bank.png", alt: "Связь-Банк" },
+  { src: "/images/logo-sibur.png", alt: "Сибур" },
 ];
 
 const LOGOS_SLIDE = [...LOGOS, ...LOGOS];
