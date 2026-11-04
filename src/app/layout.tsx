@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import YandexMetrika from "@/components/YandexMetrika/YandexMetrika";
 
 const siteUrl = "https://digiform.ru";
 const siteName = "Digiform";
@@ -86,7 +87,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <YandexMetrika />
+      </body>
     </html>
   );
 }

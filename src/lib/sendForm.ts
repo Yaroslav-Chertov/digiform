@@ -61,4 +61,5 @@ export async function sendContactForm(data: ContactFormData): Promise<void> {
       "Не удалось отправить форму. Попробуйте ещё раз.",
     );
   }
+  window.ym?.(114075872, "reachGoal", "form_submit");
 }
